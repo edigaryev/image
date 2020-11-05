@@ -1,5 +1,3 @@
-// +build containers_image_openpgp
-
 package signature
 
 import (
@@ -98,13 +96,13 @@ func (m *openpgpSigningMechanism) importKeysFromBytes(blob []byte) ([]string, er
 
 // SupportsSigning returns nil if the mechanism supports signing, or a SigningNotSupportedError.
 func (m *openpgpSigningMechanism) SupportsSigning() error {
-	return SigningNotSupportedError("signing is not supported in github.com/containers/image built with the containers_image_openpgp build tag")
+	return SigningNotSupportedError("signing is not supported when using golang.org/x/crypto/openpgp")
 }
 
 // Sign creates a (non-detached) signature of input using keyIdentity.
 // Fails with a SigningNotSupportedError if the mechanism does not support signing.
 func (m *openpgpSigningMechanism) Sign(input []byte, keyIdentity string) ([]byte, error) {
-	return nil, SigningNotSupportedError("signing is not supported in github.com/containers/image built with the containers_image_openpgp build tag")
+	return nil, SigningNotSupportedError("signing is not supported when using golang.org/x/crypto/openpgp")
 }
 
 // Verify parses unverifiedSignature and returns the content and the signer's identity

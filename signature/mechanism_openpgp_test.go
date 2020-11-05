@@ -1,5 +1,3 @@
-// +build containers_image_openpgp
-
 package signature
 
 import (
