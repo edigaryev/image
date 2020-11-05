@@ -14,8 +14,8 @@ GOBIN := $(GOPATH)/bin
 endif
 
 # when cross compiling _for_ a Darwin or windows host, then we must use openpgp
-BUILD_TAGS_WINDOWS_CROSS = containers_image_openpgp
-BUILD_TAGS_DARWIN_CROSS = containers_image_openpgp
+BUILD_TAGS_WINDOWS_CROSS = ""
+BUILD_TAGS_DARWIN_CROSS = ""
 
 BUILDTAGS = btrfs_noversion libdm_no_deferred_remove
 BUILDFLAGS := -tags "$(BUILDTAGS)"

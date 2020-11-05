@@ -21,7 +21,6 @@ require (
 	github.com/klauspost/compress v1.10.8
 	github.com/klauspost/pgzip v1.2.4
 	github.com/morikuni/aec v1.0.0 // indirect
-	github.com/mtrmac/gpgme v0.1.2
 	github.com/opencontainers/go-digest v1.0.0
 	github.com/opencontainers/image-spec v1.0.2-0.20190823105129-775207bd45b6
 	github.com/opencontainers/selinux v1.5.2
